@@ -61,8 +61,15 @@
     font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
     color: var(--accent); background: var(--accent-light); padding: 3px 9px; border-radius: 999px;
   }
-  .nav-signin { font-size: 0.85rem; color: var(--text-muted); text-decoration: none; transition: color 0.15s; }
+  .nav-right { display: flex; align-items: center; gap: 24px; }
+  .nav-links { display: flex; align-items: center; gap: 20px; }
+  .nav-link { font-size: 0.85rem; color: var(--text-muted); text-decoration: none; transition: color 0.15s; }
+  .nav-link:hover { color: var(--text); }
+  .nav-signin {
+    font-size: 0.85rem; color: var(--text-muted); text-decoration: none; transition: color 0.15s;
+  }
   .nav-signin:hover { color: var(--text); }
+  @media (max-width: 560px) { .nav-links { display: none; } }
 
   /* Page container */
   .page { max-width: 900px; margin: 0 auto; padding: 0 32px; position: relative; z-index: 1; }
@@ -228,11 +235,21 @@
 
   /* Footer */
   footer {
-    border-top: 1px solid var(--border); padding: 28px 0 40px;
-    display: flex; justify-content: space-between; align-items: center;
+    border-top: 1px solid var(--border); padding: 36px 0 48px;
+    display: flex; justify-content: space-between; align-items: flex-start; gap: 32px;
     font-size: 0.78rem; color: var(--text-faint);
   }
-  .footer-logo { font-weight: 700; color: var(--accent); font-size: 0.88rem; }
+  .footer-logo { font-weight: 700; color: var(--accent); font-size: 0.88rem; display: block; margin-bottom: 6px; }
+  .footer-left { display: flex; flex-direction: column; gap: 3px; }
+  .footer-right { display: flex; gap: 40px; flex-shrink: 0; }
+  .footer-col { display: flex; flex-direction: column; gap: 10px; }
+  .footer-col-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 2px; }
+  .footer-link { color: var(--text-muted); text-decoration: none; font-size: 0.82rem; transition: color 0.15s; }
+  .footer-link:hover { color: var(--accent); }
+  @media (max-width: 560px) {
+    footer { flex-direction: column; gap: 28px; }
+    .footer-right { flex-direction: column; gap: 28px; }
+  }
 
   /* Responsive */
   @media (max-width: 720px) {
@@ -268,7 +285,14 @@
     <a href="/" class="nav-logo">FlareWatch</a>
     <span class="nav-badge">Private beta</span>
   </div>
-  <a href="https://app.flarewat.ch" class="nav-signin">Sign in →</a>
+  <div class="nav-right">
+    <div class="nav-links">
+      <a href="#how-it-works" class="nav-link">How it works</a>
+      <a href="#devices" class="nav-link">Devices</a>
+      <a href="mailto:redgepartington@gmail.com" class="nav-link">Contact</a>
+    </div>
+    <a href="https://app.flarewat.ch" class="nav-signin">Sign in →</a>
+  </div>
 </nav>
 
 <div class="page">
@@ -366,7 +390,7 @@
   <hr class="divider" />
 
   <!-- How it works -->
-  <section class="section">
+  <section class="section" id="how-it-works">
     <div class="section-label">How it works</div>
     <div class="section-title">Simple to set up.<br>Runs quietly in the background.</div>
     <p class="section-body">No manual logging, no symptom diaries, no extra effort. FlareWatch works from data you're already collecting — including years of history.</p>
@@ -421,7 +445,7 @@
   <hr class="divider" />
 
   <!-- Devices -->
-  <section class="section">
+  <section class="section" id="devices">
     <div class="section-label">Compatible devices</div>
     <div class="section-title">Works with wearables<br>you already own.</div>
     <p class="section-body">No new hardware required. FlareWatch integrates with the major consumer wearable platforms so you can get started straight away.</p>
@@ -526,8 +550,23 @@
   </div>
 
   <footer>
-    <span class="footer-logo">FlareWatch</span>
-    <span>© 2026 · Built for the chronic illness community</span>
+    <div class="footer-left">
+      <span class="footer-logo">FlareWatch</span>
+      <span>Flarewatch Ltd · London, UK</span>
+      <span>© 2026 Flarewatch Ltd. All rights reserved.</span>
+    </div>
+    <div class="footer-right">
+      <div class="footer-col">
+        <span class="footer-col-label">Legal</span>
+        <a class="footer-link" href="https://flarewatch.onrender.com/privacy">Privacy policy</a>
+        <a class="footer-link" href="https://ico.org.uk" target="_blank" rel="noopener">ICO registered</a>
+      </div>
+      <div class="footer-col">
+        <span class="footer-col-label">Company</span>
+        <a class="footer-link" href="mailto:redgepartington@gmail.com">Contact us</a>
+        <a class="footer-link" href="https://app.flarewat.ch">Sign in</a>
+      </div>
+    </div>
   </footer>
 
 </div>
