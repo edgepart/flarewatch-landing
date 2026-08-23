@@ -1,0 +1,316 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — FlareWatch</title>
+<style>
+  :root {
+    --bg: #FFFFFF;
+    --bg-warm: #FFF8F4;
+    --bg-hero: #FCEEE5;
+    --bg-section: #FFF8F4;
+    --text: #1A1614;
+    --text-muted: #7A706B;
+    --text-faint: #B8AFA9;
+    --accent: #C8502B;
+    --accent-hover: #A8401E;
+    --accent-light: #FDEAE0;
+    --border: #EDE5DF;
+    --border-strong: #D4C8C0;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #191410; --bg-warm: #201A16; --bg-hero: #221812; --bg-section: #1D1713;
+      --text: #F5EDE8; --text-muted: #9A8D87; --text-faint: #5C504A;
+      --accent: #E8724A; --accent-hover: #F0845C; --accent-light: #2D1A12;
+      --border: #2D2420; --border-strong: #3D302A;
+    }
+  }
+  :root[data-theme="light"] {
+    --bg: #FFFFFF; --bg-warm: #FFF8F4; --bg-hero: #FCEEE5; --bg-section: #FFF8F4;
+    --text: #1A1614; --text-muted: #7A706B; --text-faint: #B8AFA9;
+    --accent: #C8502B; --accent-hover: #A8401E; --accent-light: #FDEAE0;
+    --border: #EDE5DF; --border-strong: #D4C8C0;
+  }
+  :root[data-theme="dark"] {
+    --bg: #191410; --bg-warm: #201A16; --bg-hero: #221812; --bg-section: #1D1713;
+    --text: #F5EDE8; --text-muted: #9A8D87; --text-faint: #5C504A;
+    --accent: #E8724A; --accent-hover: #F0845C; --accent-light: #2D1A12;
+    --border: #2D2420; --border-strong: #3D302A;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg); color: var(--text);
+    line-height: 1.6; -webkit-font-smoothing: antialiased;
+  }
+
+  /* Nav */
+  nav {
+    position: relative; z-index: 10;
+    display: flex; align-items: center; justify-content: space-between;
+    max-width: 900px; margin: 0 auto; padding: 28px 32px 0;
+  }
+  .nav-left { display: flex; align-items: center; gap: 12px; }
+  .nav-logo { font-size: 1rem; font-weight: 700; color: var(--accent); letter-spacing: -0.02em; text-decoration: none; }
+  .nav-badge {
+    font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--accent); background: var(--accent-light); padding: 3px 9px; border-radius: 999px;
+  }
+  .nav-right { display: flex; align-items: center; gap: 24px; }
+  .nav-links { display: flex; align-items: center; gap: 20px; }
+  .nav-link { font-size: 0.85rem; color: var(--text-muted); text-decoration: none; transition: color 0.15s; }
+  .nav-link:hover { color: var(--text); }
+  .nav-signin { font-size: 0.85rem; color: var(--text-muted); text-decoration: none; transition: color 0.15s; }
+  .nav-signin:hover { color: var(--text); }
+  @media (max-width: 560px) { .nav-links { display: none; } }
+
+  /* Content */
+  .page { max-width: 900px; margin: 0 auto; padding: 0 32px; }
+
+  .policy-wrap {
+    max-width: 680px;
+    padding: 56px 0 80px;
+  }
+
+  .page-eyebrow {
+    font-size: 0.7rem; font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase;
+    color: var(--text-faint); margin-bottom: 10px;
+  }
+  h1 {
+    font-size: 2rem; font-weight: 700; letter-spacing: -0.03em;
+    color: var(--text); margin-bottom: 6px; text-wrap: balance; line-height: 1.15;
+  }
+  .meta { font-size: 0.82rem; color: var(--text-faint); margin-bottom: 40px; }
+
+  .controller-box {
+    background: var(--bg-warm);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 22px 24px;
+    margin-bottom: 48px;
+  }
+  .controller-label {
+    font-size: 0.68rem; font-weight: 700; color: var(--text-faint);
+    text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px;
+  }
+  .controller-box p { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 4px; }
+  .controller-box p:last-child { margin-bottom: 0; }
+  .controller-box strong { color: var(--text); font-weight: 600; }
+
+  h2 {
+    font-size: 0.92rem; font-weight: 700; color: var(--text);
+    margin-top: 40px; margin-bottom: 14px;
+    padding-bottom: 10px; border-bottom: 1px solid var(--border);
+    letter-spacing: -0.01em;
+  }
+  p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 14px; line-height: 1.72; }
+  ul { margin: 0 0 14px 18px; }
+  li { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 7px; line-height: 1.6; }
+  strong { color: var(--text); font-weight: 600; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .table-wrap { overflow-x: auto; margin-bottom: 14px; border-radius: 10px; border: 1px solid var(--border); }
+  table { width: 100%; border-collapse: collapse; font-size: 0.85rem; min-width: 480px; }
+  th {
+    text-align: left; padding: 10px 14px;
+    background: var(--bg-warm); color: var(--text-faint);
+    font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700;
+    border-bottom: 1px solid var(--border);
+  }
+  td { padding: 10px 14px; border-top: 1px solid var(--border); color: var(--text-muted); vertical-align: top; }
+  tr:nth-child(even) td { background: var(--bg-warm); }
+
+  /* Footer */
+  footer {
+    border-top: 1px solid var(--border); padding: 36px 0 48px;
+    display: flex; justify-content: space-between; align-items: flex-start; gap: 32px;
+    font-size: 0.78rem; color: var(--text-faint);
+  }
+  .footer-logo { font-weight: 700; color: var(--accent); font-size: 0.88rem; display: block; margin-bottom: 6px; }
+  .footer-left { display: flex; flex-direction: column; gap: 3px; }
+  .footer-right { display: flex; gap: 40px; flex-shrink: 0; }
+  .footer-col { display: flex; flex-direction: column; gap: 10px; }
+  .footer-col-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 2px; }
+  .footer-link { color: var(--text-muted); text-decoration: none; font-size: 0.82rem; transition: color 0.15s; }
+  .footer-link:hover { color: var(--accent); }
+  @media (max-width: 560px) {
+    footer { flex-direction: column; gap: 28px; }
+    .footer-right { flex-direction: column; gap: 28px; }
+  }
+
+  /* Responsive */
+  @media (max-width: 720px) {
+    .page { padding: 0 20px; }
+    nav { padding: 24px 20px 0; }
+    h1 { font-size: 1.65rem; }
+    .policy-wrap { padding: 40px 0 60px; }
+    .nav-badge { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+</style>
+
+<nav>
+  <div class="nav-left">
+    <a href="/" class="nav-logo">FlareWatch</a>
+    <span class="nav-badge">Private beta</span>
+  </div>
+  <div class="nav-right">
+    <div class="nav-links">
+      <a href="/#how-it-works" class="nav-link">How it works</a>
+      <a href="/#devices" class="nav-link">Devices</a>
+      <a href="mailto:redgepartington@gmail.com" class="nav-link">Contact</a>
+    </div>
+    <a href="https://app.flarewat.ch" class="nav-signin">Sign in →</a>
+  </div>
+</nav>
+
+<div class="page">
+  <div class="policy-wrap">
+
+    <div class="page-eyebrow">Legal</div>
+    <h1>Privacy Policy</h1>
+    <p class="meta">Last updated: 23 August 2026</p>
+
+    <div class="controller-box">
+      <div class="controller-label">Data Controller</div>
+      <p><strong>Flarewatch Ltd</strong></p>
+      <p>Flat 62, John Wetherby Court East, 22 High St, London, E15 2PP</p>
+      <p>Email: <a href="mailto:redgepartington@gmail.com">redgepartington@gmail.com</a></p>
+    </div>
+
+    <h2>1. Who we are and what this policy covers</h2>
+    <p>FlareWatch is a health monitoring service that uses data from wearable devices to help people with chronic health conditions track and anticipate flare-ups. This policy explains what personal data Flarewatch Ltd ("we", "us", "our") collects, why we collect it, how we protect it, and your rights under UK data protection law (UK GDPR and the Data Protection Act 2018).</p>
+    <p>Please read this policy carefully before using FlareWatch. By creating an account and connecting your device, you give your explicit consent to us processing your health data as described here.</p>
+
+    <h2>2. The data we collect</h2>
+    <p><strong>Account data</strong></p>
+    <ul>
+      <li>Username and password (stored as a hashed value — we never store your password in plain text)</li>
+      <li>Display name</li>
+      <li>Alert email address (only if you choose to set up flare alerts)</li>
+    </ul>
+    <p><strong>Health data (special category data)</strong></p>
+    <p>When you connect a wearable device, we receive and store the following metrics:</p>
+    <ul>
+      <li>Resting heart rate (bpm)</li>
+      <li>Heart rate variability — HRV (ms)</li>
+      <li>Sleep score or sleep efficiency (%)</li>
+      <li>Daily step count</li>
+      <li>Stress level (where available from your device)</li>
+    </ul>
+    <p>We do <strong>not</strong> collect continuous heart rate readings, GPS location, audio, or any data not listed above.</p>
+
+    <h2>3. How we collect your data</h2>
+    <p>We collect health data through a secure OAuth 2.0 connection to your device manufacturer's API. This means you explicitly authorise FlareWatch to read your data from your device account (Oura, Fitbit, Whoop, Polar, Withings, or Garmin). We never receive your device account password — authentication is handled entirely by the device manufacturer.</p>
+    <p>You can revoke this access at any time through your device manufacturer's account settings.</p>
+
+    <h2>4. Why we process your data and the legal basis</h2>
+    <div class="table-wrap">
+      <table>
+        <tr>
+          <th>Purpose</th>
+          <th>Data used</th>
+          <th>Legal basis (UK GDPR)</th>
+        </tr>
+        <tr>
+          <td>Computing your personalised flare risk score</td>
+          <td>Health metrics</td>
+          <td>Explicit consent (Art. 6(1)(a) and Art. 9(2)(a))</td>
+        </tr>
+        <tr>
+          <td>Account management and authentication</td>
+          <td>Username, password hash</td>
+          <td>Contract — necessary to provide the service (Art. 6(1)(b))</td>
+        </tr>
+        <tr>
+          <td>Sending flare alert emails</td>
+          <td>Alert email, flare score</td>
+          <td>Explicit consent (Art. 6(1)(a))</td>
+        </tr>
+        <tr>
+          <td>Improving the algorithm</td>
+          <td>Anonymised, aggregated metrics</td>
+          <td>Legitimate interest (Art. 6(1)(f))</td>
+        </tr>
+      </table>
+    </div>
+
+    <h2>5. Who we share your data with</h2>
+    <p>We do not sell, rent, or share your personal data with third parties for marketing. We use the following data processors to operate the service:</p>
+    <ul>
+      <li><strong>Render Services Inc</strong> — cloud hosting. Your data is stored on Render's infrastructure (see section 7 on international transfers).</li>
+      <li><strong>Email service provider</strong> — used only to send flare alert emails if you have enabled this feature.</li>
+    </ul>
+    <p>We may disclose your data if required to do so by law or in response to a valid request from a law enforcement authority.</p>
+
+    <h2>6. How long we keep your data</h2>
+    <ul>
+      <li><strong>Health metrics</strong> — retained while your account is active; deleted within 30 days of account deletion.</li>
+      <li><strong>Account data</strong> — deleted within 30 days of account deletion.</li>
+      <li><strong>Alert email</strong> — deleted immediately when you remove it or delete your account.</li>
+    </ul>
+
+    <h2>7. International data transfers</h2>
+    <p>Your data is hosted by Render Services Inc, based in the United States. Transfers to the US are made under appropriate safeguards in accordance with UK GDPR requirements, including standard contractual clauses. See <a href="https://render.com/privacy" target="_blank" rel="noopener">render.com/privacy</a> for details.</p>
+
+    <h2>8. Your rights</h2>
+    <p>Under UK GDPR you have the following rights. Contact us at <a href="mailto:redgepartington@gmail.com">redgepartington@gmail.com</a> to exercise any of them — we will respond within one month.</p>
+    <ul>
+      <li><strong>Access</strong> — request a copy of the personal data we hold about you.</li>
+      <li><strong>Rectification</strong> — ask us to correct inaccurate or incomplete data.</li>
+      <li><strong>Erasure</strong> — ask us to delete your account and all associated data.</li>
+      <li><strong>Portability</strong> — receive your health data in a machine-readable format (CSV).</li>
+      <li><strong>Restriction</strong> — ask us to pause processing your data in certain circumstances.</li>
+      <li><strong>Object</strong> — object to processing based on legitimate interests.</li>
+      <li><strong>Withdraw consent</strong> — withdraw at any time by deleting your account or disconnecting your device. This does not affect the lawfulness of prior processing.</li>
+    </ul>
+
+    <h2>9. Security</h2>
+    <p>We take reasonable technical and organisational measures to protect your data, including:</p>
+    <ul>
+      <li>Passwords stored using bcrypt hashing — never in plain text</li>
+      <li>OAuth tokens encrypted at rest</li>
+      <li>HTTPS for all data in transit</li>
+      <li>Access to production data restricted to authorised personnel only</li>
+    </ul>
+    <p>In the event of a data breach likely to risk your rights and freedoms, we will notify you and the ICO within 72 hours as required by law.</p>
+
+    <h2>10. Cookies</h2>
+    <p>FlareWatch uses a single session cookie to keep you logged in. This cookie is strictly necessary for the service to function and does not track you across other websites. We do not use advertising or analytics cookies.</p>
+
+    <h2>11. Children</h2>
+    <p>FlareWatch is not intended for anyone under 18. We do not knowingly collect data from children. If you believe we have done so inadvertently, contact us and we will delete it promptly.</p>
+
+    <h2>12. Changes to this policy</h2>
+    <p>We may update this policy from time to time. We will notify you of significant changes by email or by posting a notice in the app. The "last updated" date at the top always reflects the current version.</p>
+
+    <h2>13. How to complain</h2>
+    <p>If you have concerns about how we handle your data, please contact us first at <a href="mailto:redgepartington@gmail.com">redgepartington@gmail.com</a>.</p>
+    <p>If you remain unsatisfied, you have the right to complain to the <strong>Information Commissioner's Office (ICO)</strong>:</p>
+    <ul>
+      <li>Website: <a href="https://ico.org.uk" target="_blank" rel="noopener">ico.org.uk</a></li>
+      <li>Helpline: 0303 123 1113</li>
+    </ul>
+
+    <footer>
+      <div class="footer-left">
+        <span class="footer-logo">FlareWatch</span>
+        <span>Flarewatch Ltd · London, UK</span>
+        <span>© 2026 Flarewatch Ltd. All rights reserved.</span>
+      </div>
+      <div class="footer-right">
+        <div class="footer-col">
+          <span class="footer-col-label">Legal</span>
+          <a class="footer-link" href="/privacy.html">Privacy policy</a>
+          <a class="footer-link" href="https://ico.org.uk" target="_blank" rel="noopener">ICO registered</a>
+        </div>
+        <div class="footer-col">
+          <span class="footer-col-label">Company</span>
+          <a class="footer-link" href="mailto:redgepartington@gmail.com">Contact us</a>
+          <a class="footer-link" href="https://app.flarewat.ch">Sign in</a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+</div>
