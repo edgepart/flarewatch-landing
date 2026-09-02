@@ -213,7 +213,7 @@
   .founder-title { font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; }
   .founder-credentials { display: flex; flex-direction: column; gap: 4px; }
   .credential { font-size: 0.78rem; color: var(--text-faint); display: flex; align-items: center; gap: 6px; }
-  .credential::before { content: '—'; color: var(--accent); font-weight: 600; }
+  .credential::before { content: '·'; color: var(--accent); font-weight: 600; }
 
   .founder-right { }
   .founder-eyebrow { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 16px; }
@@ -299,7 +299,7 @@
   <section class="hero">
     <div class="hero-eyebrow">An early-warning platform for chronic illness</div>
     <h1>Know what's coming<br>before your body does.</h1>
-    <p class="hero-sub">Your wearable is already collecting the data that precedes a flare — heart rate shifts, sleep disruption, HRV drops. For people living with IBD, MS, lupus, fibromyalgia, and dozens of other chronic conditions, FlareWatch turns that data into an early warning system.</p>
+    <p class="hero-sub">Your wearable is already collecting the data that precedes a flare: heart rate shifts, sleep disruption, HRV drops. For people living with IBD, MS, lupus, fibromyalgia, and dozens of other chronic conditions, FlareWatch turns that data into an early warning system.</p>
     <form class="waitlist-form" onsubmit="handleSubmit(event)">
       <input type="email" id="email-input" placeholder="your@email.com" required autocomplete="email" />
       <button type="submit" id="submit-btn">Join the waitlist</button>
@@ -308,11 +308,11 @@
     <p class="hero-signin">Already a member? <a href="https://app.flarewat.ch">Sign in to your dashboard</a></p>
     <div class="device-strip">
       <div class="devices-label">Works with your wearable</div>
-      <div class="device-chip"><span class="device-icon"></span> Apple Watch</div>
       <div class="device-chip"><span class="device-icon"></span> Garmin</div>
       <div class="device-chip"><span class="device-icon ring"></span> Oura Ring</div>
       <div class="device-chip"><span class="device-icon"></span> Fitbit</div>
-      <div class="device-chip"><span class="device-icon"></span> Samsung</div>
+      <div class="device-chip"><span class="device-icon"></span> Polar</div>
+      <div class="device-chip"><span class="device-icon"></span> Withings</div>
       <div class="device-chip"><span class="device-icon"></span> Whoop</div>
     </div>
   </section>
@@ -353,7 +353,7 @@
       </div>
       <div class="stat-card">
         <span class="stat-num">Days</span>
-        <div class="stat-label">of advance warning FlareWatch aims to deliver — before symptoms strike</div>
+        <div class="stat-label">of advance warning FlareWatch aims to deliver, before symptoms strike</div>
         <div class="stat-source">based on HRV, sleep &amp; HR signal lag</div>
       </div>
     </div>
@@ -365,15 +365,15 @@
   <section class="section">
     <div class="section-label">The problem</div>
     <div class="section-title">Flares still arrive without warning.<br>They don't have to.</div>
-    <p class="section-body">For millions of people with chronic conditions, the hardest part isn't the diagnosis — it's not knowing when the next flare is coming, and being forced into reactive care instead of proactive management.</p>
+    <p class="section-body">For millions of people with chronic conditions, the hardest part isn't the diagnosis. It's not knowing when the next flare is coming, and being forced into reactive care instead of proactive management.</p>
     <div class="problem-cols">
       <div class="problem-card now">
         <div class="problem-card-label">Today</div>
         <ul>
-          <li><span class="bullet">—</span><span>Flares arrive without warning, often mid-week or mid-commitment</span></li>
-          <li><span class="bullet">—</span><span>Reactive treatment: escalate medication after symptoms strike</span></li>
-          <li><span class="bullet">—</span><span>Wearables collect thousands of data points — none interpreted for chronic illness</span></li>
-          <li><span class="bullet">—</span><span>Gut feeling and symptom diaries are the only early signals</span></li>
+          <li><span class="bullet">·</span><span>Flares arrive without warning, often mid-week or mid-commitment</span></li>
+          <li><span class="bullet">·</span><span>Reactive treatment: escalate medication after symptoms strike</span></li>
+          <li><span class="bullet">·</span><span>Wearables collect thousands of data points, none interpreted for chronic illness</span></li>
+          <li><span class="bullet">·</span><span>Gut feeling and symptom diaries are the only early signals</span></li>
         </ul>
       </div>
       <div class="problem-card future">
@@ -394,27 +394,27 @@
   <section class="section" id="how-it-works">
     <div class="section-label">How it works</div>
     <div class="section-title">Simple to set up.<br>Runs quietly in the background.</div>
-    <p class="section-body">No manual logging, no symptom diaries, no extra effort. FlareWatch works from data you're already collecting — including years of history.</p>
+    <p class="section-body">No manual logging, no symptom diaries, no extra effort. FlareWatch works from data you're already collecting, including years of history.</p>
     <div class="steps" style="margin-bottom: 52px;">
       <div class="step">
         <div class="step-num">1</div>
         <div>
           <h3>Create an account and connect your wearable</h3>
-          <p>Link your device in seconds — Apple Watch, Garmin, Oura Ring, Fitbit, Samsung, or Whoop. FlareWatch pulls your existing data straight away.</p>
+          <p>Connect your Garmin account in seconds and FlareWatch pulls in your history straight away. Support for Oura, Fitbit, Polar, Withings, and Whoop is coming soon.</p>
         </div>
       </div>
       <div class="step">
         <div class="step-num">2</div>
         <div>
           <h3>We learn what healthy looks like for you</h3>
-          <p>Everyone's baseline is different. FlareWatch uses your own historical data to establish your personal normal — not a population average.</p>
+          <p>Everyone's baseline is different. FlareWatch uses your own historical data to establish your personal normal, not a population average.</p>
         </div>
       </div>
       <div class="step">
         <div class="step-num">3</div>
         <div>
           <h3>Get your daily flare risk score</h3>
-          <p>A clear 0–10 score, updated every morning. When it climbs, you get an alert — time to rest, adjust, or reach your care team before the flare peaks.</p>
+          <p>A clear 0–10 score, updated every morning. When it climbs, you get an alert: time to rest, adjust, or reach your care team before the flare peaks.</p>
         </div>
       </div>
     </div>
@@ -454,22 +454,18 @@
       <div class="device-card">
         <div class="device-logo">
           <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="9" y="5" width="14" height="22" rx="4.5" stroke="currentColor" stroke-width="2" fill="none" style="color:var(--text-muted)"/>
-            <rect x="12" y="2" width="8" height="3" rx="1.5" fill="var(--text-faint)"/>
-            <rect x="12" y="27" width="8" height="3" rx="1.5" fill="var(--text-faint)"/>
-          </svg>
-        </div>
-        <div class="device-info"><strong>Apple Watch</strong><span>via Apple Health</span></div>
-      </div>
-      <div class="device-card">
-        <div class="device-logo">
-          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="8" y="6" width="16" height="20" rx="4" stroke="currentColor" stroke-width="2" fill="none" style="color:var(--text-muted)"/>
             <rect x="11" y="2.5" width="10" height="3" rx="1.5" fill="var(--text-faint)"/>
             <rect x="11" y="26.5" width="10" height="3" rx="1.5" fill="var(--text-faint)"/>
           </svg>
         </div>
-        <div class="device-info"><strong>Garmin</strong><span>via Garmin Connect</span></div>
+        <div class="device-info">
+          <div style="display:flex;align-items:center;gap:6px;margin-bottom:2px;">
+            <strong>Garmin</strong>
+            <span style="font-size:0.62rem;font-weight:700;color:var(--accent);background:var(--accent-light);padding:1px 7px;border-radius:999px;letter-spacing:0.04em;">Live</span>
+          </div>
+          <span>via Garmin Connect</span>
+        </div>
       </div>
       <div class="device-card">
         <div class="device-logo">
@@ -478,7 +474,13 @@
             <circle cx="16" cy="16" r="5.5" stroke="currentColor" stroke-width="1.5" fill="none" style="color:var(--text-faint)"/>
           </svg>
         </div>
-        <div class="device-info"><strong>Oura Ring</strong><span>via Oura API</span></div>
+        <div class="device-info">
+          <div style="display:flex;align-items:center;gap:6px;margin-bottom:2px;">
+            <strong>Oura Ring</strong>
+            <span style="font-size:0.62rem;font-weight:600;color:var(--text-muted);background:var(--bg-section);padding:1px 7px;border-radius:999px;border:1px solid var(--border);">Soon</span>
+          </div>
+          <span>via Oura API</span>
+        </div>
       </div>
       <div class="device-card">
         <div class="device-logo">
@@ -488,17 +490,44 @@
             <line x1="12" y1="15" x2="20" y2="15" stroke="var(--text-faint)" stroke-width="1.5" stroke-linecap="round"/>
           </svg>
         </div>
-        <div class="device-info"><strong>Fitbit</strong><span>via Fitbit API</span></div>
+        <div class="device-info">
+          <div style="display:flex;align-items:center;gap:6px;margin-bottom:2px;">
+            <strong>Fitbit</strong>
+            <span style="font-size:0.62rem;font-weight:600;color:var(--text-muted);background:var(--bg-section);padding:1px 7px;border-radius:999px;border:1px solid var(--border);">Soon</span>
+          </div>
+          <span>via Fitbit API</span>
+        </div>
       </div>
       <div class="device-card">
         <div class="device-logo">
           <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="8" y="6" width="16" height="20" rx="5" stroke="currentColor" stroke-width="2" fill="none" style="color:var(--text-muted)"/>
-            <rect x="12" y="2.5" width="8" height="3.5" rx="1.5" fill="var(--text-faint)"/>
-            <rect x="12" y="26" width="8" height="3.5" rx="1.5" fill="var(--text-faint)"/>
+            <rect x="8" y="6" width="16" height="20" rx="4" stroke="currentColor" stroke-width="2" fill="none" style="color:var(--text-muted)"/>
+            <rect x="13" y="2.5" width="6" height="3" rx="1.5" fill="var(--text-faint)"/>
+            <rect x="13" y="26.5" width="6" height="3" rx="1.5" fill="var(--text-faint)"/>
           </svg>
         </div>
-        <div class="device-info"><strong>Samsung</strong><span>via Samsung Health</span></div>
+        <div class="device-info">
+          <div style="display:flex;align-items:center;gap:6px;margin-bottom:2px;">
+            <strong>Polar</strong>
+            <span style="font-size:0.62rem;font-weight:600;color:var(--text-muted);background:var(--bg-section);padding:1px 7px;border-radius:999px;border:1px solid var(--border);">Soon</span>
+          </div>
+          <span>via Polar API</span>
+        </div>
+      </div>
+      <div class="device-card">
+        <div class="device-logo">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="9" y="5" width="14" height="22" rx="5" stroke="currentColor" stroke-width="2" fill="none" style="color:var(--text-muted)"/>
+            <circle cx="16" cy="18" r="3.5" stroke="var(--text-faint)" stroke-width="1.5" fill="none"/>
+          </svg>
+        </div>
+        <div class="device-info">
+          <div style="display:flex;align-items:center;gap:6px;margin-bottom:2px;">
+            <strong>Withings</strong>
+            <span style="font-size:0.62rem;font-weight:600;color:var(--text-muted);background:var(--bg-section);padding:1px 7px;border-radius:999px;border:1px solid var(--border);">Soon</span>
+          </div>
+          <span>via Health Mate API</span>
+        </div>
       </div>
       <div class="device-card">
         <div class="device-logo">
@@ -507,7 +536,13 @@
             <circle cx="16" cy="16" r="3" fill="var(--text-faint)"/>
           </svg>
         </div>
-        <div class="device-info"><strong>Whoop</strong><span>via Whoop API</span></div>
+        <div class="device-info">
+          <div style="display:flex;align-items:center;gap:6px;margin-bottom:2px;">
+            <strong>Whoop</strong>
+            <span style="font-size:0.62rem;font-weight:600;color:var(--text-muted);background:var(--bg-section);padding:1px 7px;border-radius:999px;border:1px solid var(--border);">Soon</span>
+          </div>
+          <span>via Whoop API</span>
+        </div>
       </div>
     </div>
   </section>
@@ -532,9 +567,9 @@
           "I was lying in a hospital bed during a serious Crohn's flare, when my smartwatch told me I was <em>fully recovered and ready to train.</em>"
         </div>
         <div class="founder-body">
-          <p>That moment — equal parts absurd and clarifying — made it obvious. Wearables weren't built for people like me. The data was there. The hardware was there. But everything about how it was interpreted assumed the user was healthy, optimising performance, chasing a PB. Nobody had built for people managing chronic illness.</p>
-          <p>Almost three years on, I've lived through multiple severe flares and major surgery. Through all of it, my watch — packed with sensors, collecting my biometrics every few minutes — had given me nothing useful. So I built what I wish had existed.</p>
-          <p>FlareWatch reads the signals wearables already collect and translates them into something actionable — for people living with IBD, MS, lupus, fibromyalgia, and dozens of other conditions where knowing what's coming makes all the difference.</p>
+          <p>That moment, equal parts absurd and clarifying, made it obvious. Wearables weren't built for people like me. The data was there. The hardware was there. But everything about how it was interpreted assumed the user was healthy, optimising performance, chasing a PB. Nobody had built for people managing chronic illness.</p>
+          <p>Almost three years on, I've lived through multiple severe flares and major surgery. Through all of it, my watch, packed with sensors and collecting my biometrics every few minutes, had given me nothing useful. So I built what I wish had existed.</p>
+          <p>FlareWatch reads the signals wearables already collect and translates them into something actionable: for people living with IBD, MS, lupus, fibromyalgia, and dozens of other conditions where knowing what's coming makes all the difference.</p>
         </div>
       </div>
     </div>
