@@ -91,21 +91,13 @@
     font-size: 1.05rem; color: var(--text-muted);
     max-width: 520px; margin: 0 auto 40px; line-height: 1.72; text-wrap: balance;
   }
-  .waitlist-form { display: flex; gap: 8px; max-width: 420px; margin: 0 auto 14px; }
-  .waitlist-form input {
-    flex: 1; min-width: 0; padding: 13px 16px;
-    border: 1.5px solid var(--border-strong); border-radius: 10px;
-    background: var(--bg); color: var(--text); font-size: 0.95rem;
-    font-family: inherit; outline: none; transition: border-color 0.15s;
+  .hero-cta {
+    display: inline-block; background: var(--accent); color: #fff;
+    padding: 14px 32px; border-radius: 10px; font-size: 1rem; font-weight: 600;
+    text-decoration: none; letter-spacing: -0.01em; transition: background 0.15s;
+    margin-bottom: 20px;
   }
-  .waitlist-form input::placeholder { color: var(--text-faint); }
-  .waitlist-form input:focus { border-color: var(--accent); }
-  .waitlist-form button {
-    padding: 13px 22px; background: var(--accent); color: #fff;
-    border: none; border-radius: 10px; font-size: 0.9rem; font-weight: 600;
-    font-family: inherit; cursor: pointer; white-space: nowrap; transition: background 0.15s;
-  }
-  .waitlist-form button:hover { background: var(--accent-hover); }
+  .hero-cta:hover { background: var(--accent-hover); }
 
   .hero-signin { font-size: 0.85rem; color: var(--text-faint); margin-bottom: 48px; }
   .hero-signin a {
@@ -283,7 +275,7 @@
 <nav>
   <div class="nav-left">
     <a href="/" class="nav-logo">FlareWatch</a>
-    <span class="nav-badge">Private beta</span>
+    <span class="nav-badge">Beta</span>
   </div>
   <div class="nav-right">
     <div class="nav-links">
@@ -300,17 +292,7 @@
     <div class="hero-eyebrow">An early-warning platform for chronic illness</div>
     <h1>Know what's coming<br>before your body does.</h1>
     <p class="hero-sub">Your wearable is already collecting the data that precedes a flare: heart rate shifts, sleep disruption, HRV drops. For people living with IBD, MS, lupus, fibromyalgia, and dozens of other chronic conditions, FlareWatch turns that data into an early warning system.</p>
-    <form class="waitlist-form" onsubmit="handleSubmit(event)">
-      <input type="email" id="email-input" placeholder="your@email.com" required autocomplete="email" />
-      <button type="submit" id="submit-btn">Join the waitlist</button>
-    </form>
-    <p style="font-size:0.72rem;color:var(--text-faint);margin:-6px 0 20px;text-align:center;">We'll only use your email to let you know when the beta opens.</p>
-    <div style="display:flex;align-items:center;justify-content:center;gap:12px;max-width:420px;margin:0 auto 18px;">
-      <div style="flex:1;height:1px;background:var(--border);"></div>
-      <span style="font-size:0.78rem;color:var(--text-faint);">or</span>
-      <div style="flex:1;height:1px;background:var(--border);"></div>
-    </div>
-    <a href="https://app.flarewat.ch/signup" style="display:inline-block;border:1.5px solid var(--accent);color:var(--accent);padding:10px 28px;border-radius:8px;font-size:0.9rem;font-weight:600;text-decoration:none;margin-bottom:20px;letter-spacing:-0.01em;transition:background 0.15s,color 0.15s;" onmouseover="this.style.background='var(--accent)';this.style.color='#fff'" onmouseout="this.style.background='';this.style.color='var(--accent)'">Start the trial now →</a>
+    <a href="https://app.flarewat.ch/signup" class="hero-cta">Start the trial now →</a>
     <p class="hero-signin">Already a member? <a href="https://app.flarewat.ch">Sign in to your dashboard</a></p>
     <div class="device-strip">
       <div class="devices-label">Works with your wearable</div>
@@ -583,13 +565,9 @@
 
   <!-- Final CTA -->
   <div class="cta-section">
-    <h2>Be part of it from the start</h2>
-    <p>We're in private beta. Join the waitlist and we'll reach out when we're ready to bring you on board.</p>
-    <form class="waitlist-form" onsubmit="handleSubmit2(event)" style="margin: 0 auto;">
-      <input type="email" id="email-input-2" placeholder="your@email.com" required autocomplete="email" />
-      <button type="submit" id="submit-btn-2">Join the waitlist</button>
-    </form>
-    <p style="font-size:0.72rem;color:var(--text-faint);margin:10px 0 0;text-align:center;">We'll only use your email to let you know when the beta opens.</p>
+    <h2>Start tracking your health today</h2>
+    <p>Connect your Garmin, set a baseline, and get your first flare risk score within 14 days. No manual logging required.</p>
+    <a href="https://app.flarewat.ch/signup" class="hero-cta">Start the trial now →</a>
   </div>
 
   <footer>
@@ -614,31 +592,3 @@
 
 </div>
 
-<script>
-  function submitForm(emailId, btnId) {
-    const btn = document.getElementById(btnId);
-    const input = document.getElementById(emailId);
-    const email = input.value;
-    const formData = new FormData();
-    formData.append('entry.1316952885', email);
-    fetch('https://docs.google.com/forms/d/e/1FAIpQLSeuRRD0xZEKsj7K1TqRJTGS8p47Xnf45Tkegq-5P-MA0LEgYA/formResponse', {
-      method: 'POST',
-      mode: 'no-cors',
-      body: formData
-    });
-    btn.textContent = "You're on the list ✓";
-    btn.style.background = '#2D9B60';
-    btn.disabled = true;
-    input.disabled = true;
-  }
-  function handleSubmit(e) {
-    e.preventDefault();
-    submitForm('email-input', 'submit-btn');
-    const el2 = document.getElementById('email-input-2');
-    if (el2) el2.value = document.getElementById('email-input').value;
-  }
-  function handleSubmit2(e) {
-    e.preventDefault();
-    submitForm('email-input-2', 'submit-btn-2');
-  }
-</script>
