@@ -1,5 +1,18 @@
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>FlareWatch — Early warning for chronic illness</title>
+<meta name="description" content="FlareWatch turns your wearable data into an early-warning system for chronic illness. Know when a flare is coming before your body does — no manual logging required.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://flarewat.ch">
+<meta property="og:title" content="FlareWatch — Early warning for chronic illness">
+<meta property="og:description" content="FlareWatch turns your wearable data into an early-warning system for chronic illness. Know when a flare is coming before your body does.">
+<meta property="og:image" content="https://flarewat.ch/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="FlareWatch — Early warning for chronic illness">
+<meta name="twitter:description" content="FlareWatch turns your wearable data into an early-warning system for chronic illness.">
+<meta name="twitter:image" content="https://flarewat.ch/og-image.svg">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script defer data-domain="flarewat.ch" src="https://plausible.io/js/script.js"></script>
 <style>
   :root {
     --bg: #FFFFFF;
@@ -268,7 +281,6 @@
     h1 { font-size: 2rem; }
     .hero { padding: 60px 0 48px; }
     .hero-sub { font-size: 1rem; }
-    .waitlist-form { flex-direction: column; }
     .stats-grid { grid-template-columns: 1fr; }
     .stat-card + .stat-card { border-left: none; border-top: 1px solid var(--border); }
     .problem-cols { grid-template-columns: 1fr; }
@@ -285,6 +297,46 @@
     .devices-grid { grid-template-columns: 1fr; }
   }
   @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+
+  /* Sticky mobile CTA */
+  .sticky-cta {
+    display: none;
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 50;
+    padding: 12px 20px 20px;
+    background: var(--bg);
+    border-top: 1px solid var(--border);
+    box-shadow: 0 -4px 24px rgba(0,0,0,0.08);
+  }
+  .sticky-cta a {
+    display: block; text-align: center;
+    background: var(--accent); color: #fff;
+    padding: 14px; border-radius: 10px; font-size: 0.95rem; font-weight: 700;
+    text-decoration: none; transition: background 0.15s;
+  }
+  .sticky-cta a:hover { background: var(--accent-hover); }
+  @media (max-width: 720px) {
+    .sticky-cta.show { display: block; }
+  }
+
+  /* Cookie banner */
+  .cookie-banner {
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 200;
+    background: var(--text); color: var(--bg);
+    padding: 14px 20px; display: flex;
+    align-items: center; justify-content: space-between; gap: 16px;
+    font-size: 0.82rem; line-height: 1.5;
+  }
+  .cookie-banner a { color: #f97316; text-underline-offset: 2px; }
+  .cookie-banner button {
+    flex-shrink: 0; background: #fff; color: #1A1614;
+    border: none; border-radius: 6px; padding: 7px 16px;
+    font-size: 0.82rem; font-weight: 600; cursor: pointer; white-space: nowrap;
+    font-family: inherit;
+  }
+  @media (max-width: 560px) {
+    .cookie-banner { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .cookie-banner button { align-self: flex-end; }
+  }
 </style>
 
 <div class="hero-glow"></div>
@@ -608,4 +660,35 @@
   </footer>
 
 </div>
+
+<!-- Sticky mobile CTA -->
+<div class="sticky-cta" id="sticky-cta">
+  <a href="https://app.flarewat.ch/signup">Start the trial now →</a>
+</div>
+
+<!-- Cookie banner -->
+<div class="cookie-banner" id="cookie-banner">
+  <span>We use privacy-friendly, cookieless analytics to understand traffic. No personal data is collected. <a href="/privacy.html">Privacy policy</a></span>
+  <button onclick="dismissCookieBanner()">Got it</button>
+</div>
+
+<script>
+  // Sticky CTA: show when the hero CTA scrolls out of view
+  const heroCta = document.querySelector('.hero-cta');
+  const stickyCta = document.getElementById('sticky-cta');
+  if (heroCta && stickyCta && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function(entries) {
+      stickyCta.classList.toggle('show', !entries[0].isIntersecting);
+    }, { threshold: 0 }).observe(heroCta);
+  }
+
+  // Cookie banner
+  function dismissCookieBanner() {
+    localStorage.setItem('fw_cookie_ok', '1');
+    document.getElementById('cookie-banner').style.display = 'none';
+  }
+  if (localStorage.getItem('fw_cookie_ok')) {
+    document.getElementById('cookie-banner').style.display = 'none';
+  }
+</script>
 
