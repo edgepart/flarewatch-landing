@@ -6,11 +6,11 @@
 <meta property="og:url" content="https://flarewat.ch">
 <meta property="og:title" content="FlareWatch — Early warning for chronic illness">
 <meta property="og:description" content="FlareWatch turns your wearable data into an early-warning system for chronic illness. Know when a flare is coming before your body does.">
-<meta property="og:image" content="https://flarewat.ch/og-image.svg">
+<meta property="og:image" content="https://flarewat.ch/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="FlareWatch — Early warning for chronic illness">
 <meta name="twitter:description" content="FlareWatch turns your wearable data into an early-warning system for chronic illness.">
-<meta name="twitter:image" content="https://flarewat.ch/og-image.svg">
+<meta name="twitter:image" content="https://flarewat.ch/og-image.png">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <script defer data-domain="flarewat.ch" src="https://plausible.io/js/script.js"></script>
 <style>
@@ -198,9 +198,8 @@
   .steps { display: flex; flex-direction: column; gap: 28px; }
   .step { display: flex; gap: 18px; align-items: flex-start; }
   .step-num {
-    width: 26px; height: 26px; border-radius: 50%; background: var(--accent-light); color: var(--accent);
-    font-size: 0.78rem; font-weight: 700; display: flex; align-items: center; justify-content: center;
-    flex-shrink: 0; margin-top: 3px;
+    font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--accent); flex-shrink: 0; margin-top: 4px; min-width: 20px;
   }
   .step h3 { font-size: 0.95rem; font-weight: 600; color: var(--text); margin-bottom: 4px; }
   .step p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.65; }
@@ -208,9 +207,12 @@
   /* Signals */
   .signals { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
   .signal-card { padding: 22px 18px; border: 1px solid var(--border); border-radius: 14px; background: var(--bg-warm); }
-  .signal-icon { font-size: 1.3rem; margin-bottom: 10px; display: block; }
+  .signal-icon { width: 24px; height: 24px; margin-bottom: 12px; display: block; color: var(--accent); }
   .signal-name { font-size: 0.75rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 4px; }
   .signal-desc { font-size: 0.82rem; color: var(--text-faint); line-height: 1.5; }
+
+  /* Device strip extras */
+  .device-strip-more { font-size: 0.75rem; color: var(--text-faint); align-self: center; }
 
   /* Devices */
   .devices-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
@@ -364,13 +366,9 @@
     <a href="https://app.flarewat.ch/signup" class="hero-cta">Start the trial now →</a>
     <p class="hero-signin">Already a member? <a href="https://app.flarewat.ch">Sign in to your dashboard</a></p>
     <div class="device-strip">
-      <div class="devices-label">Works with your wearable</div>
+      <div class="devices-label">Currently live with</div>
       <div class="device-chip"><span class="device-icon"></span> Garmin</div>
-      <div class="device-chip"><span class="device-icon ring"></span> Oura Ring</div>
-      <div class="device-chip"><span class="device-icon"></span> Fitbit</div>
-      <div class="device-chip"><span class="device-icon"></span> Polar</div>
-      <div class="device-chip"><span class="device-icon"></span> Withings</div>
-      <div class="device-chip"><span class="device-icon"></span> Whoop</div>
+      <span class="device-strip-more">Oura, Fitbit, Polar, Withings &amp; Whoop coming soon</span>
     </div>
   </section>
 </div>
@@ -478,22 +476,31 @@
     <div class="section-label">What we measure</div>
     <div class="signals">
       <div class="signal-card">
-        <span class="signal-icon">❤️</span>
+        <svg class="signal-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="2 12 5 7 8 14 11 9 14 15 17 10 20 12 22 12"/>
+        </svg>
         <div class="signal-name">Resting HR</div>
         <div class="signal-desc">Rises before inflammation takes hold</div>
       </div>
       <div class="signal-card">
-        <span class="signal-icon">😴</span>
+        <svg class="signal-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
         <div class="signal-name">Sleep quality</div>
         <div class="signal-desc">Disrupted sleep often precedes a flare by days</div>
       </div>
       <div class="signal-card">
-        <span class="signal-icon">💚</span>
+        <svg class="signal-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="2 12 5 9 8 13 11 7 14 16 17 11 20 12 22 12"/>
+        </svg>
         <div class="signal-name">HRV</div>
         <div class="signal-desc">Drops as the body's stress response builds</div>
       </div>
       <div class="signal-card">
-        <span class="signal-icon">🧠</span>
+        <svg class="signal-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="9"/>
+          <path d="M12 8v4l3 3"/>
+        </svg>
         <div class="signal-name">Stress</div>
         <div class="signal-desc">A consistent trigger, tracked passively overnight</div>
       </div>
