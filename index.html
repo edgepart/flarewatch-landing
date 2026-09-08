@@ -195,11 +195,33 @@
   .problem-card.future .bullet { color: var(--accent); }
 
   /* Steps */
-  .steps { display: flex; flex-direction: column; gap: 28px; }
-  .step { display: flex; gap: 18px; align-items: flex-start; }
+  .steps { display: flex; flex-direction: column; gap: 28px; position: relative; }
+  .steps::before {
+    content: '';
+    position: absolute;
+    left: 5px; top: 9px; bottom: 18px;
+    width: 2px;
+    background: var(--border-strong);
+  }
+  .steps::after {
+    content: '';
+    position: absolute;
+    left: 2px; bottom: 6px;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 10px solid var(--border-strong);
+  }
+  .step { display: flex; gap: 20px; align-items: flex-start; }
   .step-num {
-    font-size: 1.1rem; font-weight: 700;
-    color: var(--accent); flex-shrink: 0; margin-top: 1px; min-width: 28px;
+    width: 12px; flex-shrink: 0; margin-top: 4px;
+  }
+  .step-num::before {
+    content: '';
+    display: block;
+    width: 10px; height: 10px;
+    background: var(--accent);
+    border-radius: 50%;
+    border: 2px solid var(--bg-section);
   }
   .step h3 { font-size: 0.95rem; font-weight: 600; color: var(--text); margin-bottom: 4px; }
   .step p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.65; }
@@ -452,21 +474,21 @@
     <p class="section-body">No manual logging, no symptom diaries, no extra effort. FlareWatch works from data you're already collecting, including years of history.</p>
     <div class="steps" style="margin-bottom: 52px;">
       <div class="step">
-        <div class="step-num">1</div>
+        <div class="step-num" aria-hidden="true"></div>
         <div>
           <h3>Create an account and connect your wearable</h3>
           <p>Connect your Garmin account in seconds and FlareWatch pulls in your history straight away. Support for Oura, Fitbit, Polar, Withings, and Whoop is coming soon.</p>
         </div>
       </div>
       <div class="step">
-        <div class="step-num">2</div>
+        <div class="step-num" aria-hidden="true"></div>
         <div>
           <h3>We learn what healthy looks like for you</h3>
           <p>Everyone's baseline is different. FlareWatch uses your own historical data to establish your personal normal, not a population average.</p>
         </div>
       </div>
       <div class="step">
-        <div class="step-num">3</div>
+        <div class="step-num" aria-hidden="true"></div>
         <div>
           <h3>Get your daily flare risk score</h3>
           <p>A clear 0–10 score, updated every morning. When it climbs, you get an alert: time to rest, adjust, or reach your care team before the flare peaks.</p>
