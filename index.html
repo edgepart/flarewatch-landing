@@ -195,35 +195,10 @@
   .problem-card.future .bullet { color: var(--accent); }
 
   /* Steps */
-  .steps { display: flex; flex-direction: column; gap: 28px; position: relative; }
-  .steps::before {
-    content: '';
-    position: absolute;
-    left: 5px; top: 9px; bottom: 18px;
-    width: 2px;
-    background: var(--border-strong);
-  }
-  .steps::after {
-    content: '';
-    position: absolute;
-    left: 2px; bottom: 6px;
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
-    border-top: 10px solid var(--border-strong);
-  }
-  .step { display: flex; gap: 20px; align-items: flex-start; }
-  .step-num {
-    width: 12px; flex-shrink: 0; margin-top: 4px;
-  }
-  .step-num::before {
-    content: '';
-    display: block;
-    width: 10px; height: 10px;
-    background: var(--accent);
-    border-radius: 50%;
-    border: 2px solid var(--bg-section);
-  }
-  .step h3 { font-size: 0.95rem; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+  .steps { display: flex; flex-direction: column; gap: 28px; }
+  .step { display: flex; flex-direction: column; gap: 4px; }
+  .step-num { display: none; }
+  .step h3 { font-size: 0.95rem; font-weight: 600; color: var(--text); }
   .step p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.65; }
 
   /* Signals */
