@@ -167,7 +167,14 @@
     color: var(--accent); line-height: 1; margin-bottom: 12px; display: block;
   }
   .stat-label { font-size: 0.9rem; color: var(--text-muted); line-height: 1.55; max-width: 200px; margin: 0 auto; }
-  .stat-source { font-size: 0.72rem; color: var(--text-faint); margin-top: 8px; letter-spacing: 0.03em; }
+  .stat-source { font-size: 0.72rem; color: var(--text-muted); margin-top: 8px; letter-spacing: 0.03em; }
+  .references { max-width: 900px; margin: 0 auto; padding: 8px 32px 40px; }
+  .references h2 { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 14px; }
+  .references ol { padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+  .references li { font-size: 0.78rem; color: var(--text-muted); line-height: 1.6; }
+  .references a { color: var(--text-muted); text-decoration: underline; text-underline-offset: 2px; }
+  .references a:hover { color: var(--accent); }
+  @media (max-width: 560px) { .references { padding: 8px 20px 32px; } }
 
   /* Divider */
   .divider { border: none; border-top: 1px solid var(--border); }
@@ -206,7 +213,8 @@
   .signal-card { padding: 22px 18px; border: 1px solid var(--border); border-radius: 14px; background: var(--bg-warm); }
   .signal-icon { width: 24px; height: 24px; margin-bottom: 12px; display: block; color: var(--accent); }
   .signal-name { font-size: 0.75rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 4px; }
-  .signal-desc { font-size: 0.82rem; color: var(--text-faint); line-height: 1.5; }
+  .signal-desc { font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; }
+  .signal-desc a, .stat-source a { color: inherit; text-decoration: underline; text-decoration-color: var(--border-strong); text-underline-offset: 2px; }
 
   /* Device strip extras */
   .device-strip-more { font-size: 0.75rem; color: var(--text-faint); align-self: center; }
@@ -394,19 +402,19 @@
   <section class="stats-section">
     <div class="stats-grid">
       <div class="stat-card">
-        <span class="stat-num">1 in 3</span>
-        <div class="stat-label">adults in the UK live with a long-term health condition</div>
-        <div class="stat-source">NHS England</div>
+        <span class="stat-num">1 in 10</span>
+        <div class="stat-label">people in the UK live with an autoimmune disease</div>
+        <div class="stat-source"><a href="#references">Conrad et al., The Lancet, 2023 [1]</a></div>
       </div>
       <div class="stat-card">
-        <span class="stat-num">4m+</span>
-        <div class="stat-label">people in the UK with a chronic inflammatory or autoimmune condition</div>
-        <div class="stat-source">UK clinical surveys</div>
+        <span class="stat-num">6.7M</span>
+        <div class="stat-label">people in the UK and US live with IBD, rheumatoid arthritis, lupus or MS</div>
+        <div class="stat-source"><a href="#references">National prevalence studies [2]</a></div>
       </div>
       <div class="stat-card">
-        <span class="stat-num">Days</span>
-        <div class="stat-label">of advance warning FlareWatch aims to deliver, before symptoms strike</div>
-        <div class="stat-source">based on HRV, sleep &amp; HR signal lag</div>
+        <span class="stat-num">7 weeks</span>
+        <div class="stat-label">how early wearable signals shifted before IBD flares, in a study of 309 patients</div>
+        <div class="stat-source"><a href="#references">Hirten et al., Gastroenterology, 2025 [3]</a></div>
       </div>
     </div>
   </section>
@@ -446,13 +454,13 @@
   <section class="section" id="how-it-works">
     <div class="section-label">How it works</div>
     <div class="section-title">Simple to set up.<br>Runs quietly in the background.</div>
-    <p class="section-body">No manual logging, no symptom diaries, no extra effort. FlareWatch works from data you're already collecting, including years of history.</p>
+    <p class="section-body">No manual logging, no symptom diaries, no extra effort. FlareWatch works from data you're already collecting, including up to a year of history.</p>
     <div class="steps" style="margin-bottom: 52px;">
       <div class="step">
         <div class="step-num" aria-hidden="true"></div>
         <div>
           <h3>Create an account and connect your wearable</h3>
-          <p>Connect your Garmin account in seconds and FlareWatch pulls in your history straight away. Support for Oura, Fitbit, Polar, Withings, and Whoop is coming soon.</p>
+          <p>Connect your Garmin account in seconds and FlareWatch pulls in your recent history straight away, and up to a year with one click. Support for Oura, Fitbit, Polar, Withings, and Whoop is coming soon.</p>
         </div>
       </div>
       <div class="step">
@@ -477,21 +485,21 @@
           <polyline points="2 12 5 7 8 14 11 9 14 15 17 10 20 12 22 12"/>
         </svg>
         <div class="signal-name">Resting HR</div>
-        <div class="signal-desc">Rises before inflammation takes hold</div>
+        <div class="signal-desc">Higher during IBD flares, and shifts in the weeks before one <a href="#references">[3]</a></div>
       </div>
       <div class="signal-card">
         <svg class="signal-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
           <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
         </svg>
         <div class="signal-name">Sleep quality</div>
-        <div class="signal-desc">Disrupted sleep often precedes a flare by days</div>
+        <div class="signal-desc">Poor sleep doubled the odds of active Crohn&#8217;s disease six months later <a href="#references">[4]</a></div>
       </div>
       <div class="signal-card">
         <svg class="signal-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
           <polyline points="2 12 5 9 8 13 11 7 14 16 17 11 20 12 22 12"/>
         </svg>
         <div class="signal-name">HRV</div>
-        <div class="signal-desc">Drops as the body's stress response builds</div>
+        <div class="signal-desc">Daily HRV patterns differ between flare and remission <a href="#references">[3]</a></div>
       </div>
       <div class="signal-card">
         <svg class="signal-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -499,7 +507,7 @@
           <path d="M12 8v4l3 3"/>
         </svg>
         <div class="signal-name">Stress</div>
-        <div class="signal-desc">A consistent trigger, tracked passively overnight</div>
+        <div class="signal-desc">High stress more than doubled the risk of an IBD flare over a year <a href="#references">[5]</a></div>
       </div>
     </div>
   </section>
@@ -643,10 +651,21 @@
     <a href="https://app.flarewat.ch/signup" class="hero-cta">Start the trial now →</a>
   </div>
 
+  <section class="references" id="references" aria-labelledby="references-title">
+    <h2 id="references-title">References</h2>
+    <ol>
+      <li>Conrad N, et al. A population-based study of 19 autoimmune diseases in 22 million people in the UK. <i>The Lancet</i>, 2023. <a href="https://www.ox.ac.uk/news/2023-05-06-autoimmune-disorders-found-affect-around-one-ten-people" target="_blank" rel="noopener">University of Oxford summary</a></li>
+      <li>Combined from: Crohn&#8217;s &amp; Colitis UK and University of Nottingham (IBD, UK); CDC National Health Interview Survey 2015 (IBD, US); NICE guideline NG100 (rheumatoid arthritis, England and Wales); Helmick et al., <i>Arthritis &amp; Rheumatism</i>, 2008 (rheumatoid arthritis, US); Rees et al., <i>Annals of the Rheumatic Diseases</i>, 2016 (lupus, UK); Izmirly et al., <i>Arthritis &amp; Rheumatology</i>, 2021 (lupus, US); MS Society, 2024 (MS, UK); National MS Society (MS, US). Figures come from different years and methods.</li>
+      <li>Hirten RP, et al. Physiological data collected from wearable devices identify and predict inflammatory bowel disease flares. <i>Gastroenterology</i>, 2025. <a href="https://doi.org/10.1053/j.gastro.2024.12.024" target="_blank" rel="noopener">doi:10.1053/j.gastro.2024.12.024</a></li>
+      <li>Ananthakrishnan AN, et al. Sleep disturbance and risk of active disease in patients with Crohn&#8217;s disease and ulcerative colitis. <i>Clinical Gastroenterology and Hepatology</i>, 2013. <a href="https://pubmed.ncbi.nlm.nih.gov/23376797/" target="_blank" rel="noopener">PubMed 23376797</a></li>
+      <li>Bernstein CN, et al. A prospective population-based study of triggers of symptomatic flares in IBD. <i>American Journal of Gastroenterology</i>, 2010. <a href="https://pubmed.ncbi.nlm.nih.gov/20372115/" target="_blank" rel="noopener">PubMed 20372115</a></li>
+    </ol>
+  </section>
+
   <footer>
     <div class="footer-left">
       <span class="footer-logo">FlareWatch</span>
-      <span>Flarewatch Ltd · London, UK</span>
+      <span>Flarewatch Ltd · Registered in England and Wales · Company no. 17183676</span>
       <span>© 2026 Flarewatch Ltd. All rights reserved.</span>
     </div>
     <div class="footer-right">
