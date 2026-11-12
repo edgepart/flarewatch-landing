@@ -221,6 +221,14 @@
 
   /* Devices */
   .devices-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .best-with { margin-top: 28px; padding: 22px 24px; border: 1px solid var(--border); border-radius: 12px; background: var(--bg); }
+  .best-with h3 { font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 6px; text-wrap: balance; }
+  .best-with p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.65; max-width: 640px; }
+  .best-with p a { color: var(--text-muted); }
+  .best-with ul { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0; padding: 0; }
+  .best-with li { font-size: 0.82rem; font-weight: 600; color: var(--text); padding: 6px 12px; border: 1px solid var(--border-strong); border-radius: 999px; background: var(--bg-warm); }
+  .best-with .best-with-note { font-size: 0.8rem; }
+  @media (max-width: 560px) { .best-with { padding: 18px; } }
   .device-card { display: flex; align-items: center; gap: 12px; padding: 18px 20px; border: 1px solid var(--border); border-radius: 12px; background: var(--bg-warm); }
   .device-logo { width: 32px; height: 32px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
   .device-logo svg { width: 100%; height: 100%; }
@@ -614,6 +622,20 @@
         </div>
       </div>
     </div>
+
+    <div class="best-with" id="works-best-with">
+      <h3>Garmin watches that work best</h3>
+      <p>The flare score is built mainly from four readings: resting heart rate, all-day stress, Garmin&#8217;s sleep score and overnight HRV status. According to Garmin&#8217;s owner&#8217;s manuals, these watches record all four <a href="#references">[6]</a>:</p>
+      <ul>
+        <li>Forerunner 165</li>
+        <li>v&iacute;voactive 6</li>
+        <li>Venu 3</li>
+        <li>Instinct 3 (Solar and AMOLED)</li>
+        <li>f&#275;nix 8</li>
+        <li>epix (Gen 2) and epix Pro (Gen 2)</li>
+      </ul>
+      <p class="best-with-note">Other Garmin watches work too: FlareWatch uses whatever your watch records and shows you which readings it has. Some older models, such as the first-generation Instinct Solar, don&#8217;t produce a sleep score. Sleep score and HRV status are measured overnight, so wear your watch to bed.</p>
+    </div>
   </section>
 
   <!-- Founder -->
@@ -659,6 +681,7 @@
       <li>Hirten RP, et al. Physiological data collected from wearable devices identify and predict inflammatory bowel disease flares. <i>Gastroenterology</i>, 2025. <a href="https://doi.org/10.1053/j.gastro.2024.12.024" target="_blank" rel="noopener">doi:10.1053/j.gastro.2024.12.024</a></li>
       <li>Ananthakrishnan AN, et al. Sleep disturbance and risk of active disease in patients with Crohn&#8217;s disease and ulcerative colitis. <i>Clinical Gastroenterology and Hepatology</i>, 2013. <a href="https://pubmed.ncbi.nlm.nih.gov/23376797/" target="_blank" rel="noopener">PubMed 23376797</a></li>
       <li>Bernstein CN, et al. A prospective population-based study of triggers of symptomatic flares in IBD. <i>American Journal of Gastroenterology</i>, 2010. <a href="https://pubmed.ncbi.nlm.nih.gov/20372115/" target="_blank" rel="noopener">PubMed 20372115</a></li>
+      <li>Garmin owner&#8217;s manuals, &#8220;Heart Rate Variability Status&#8221; and &#8220;Sleep Tracking&#8221; sections, checked 12 November 2026: <a href="https://www8.garmin.com/manuals/webhelp/GUID-607F08F6-33FC-40BF-9727-84E54043D82D/EN-US/GUID-9282196F-D969-404D-B678-F48A13D8D0CB.html" target="_blank" rel="noopener">Forerunner 165</a>, <a href="https://www8.garmin.com/manuals/webhelp/GUID-8C2C402F-55AC-431F-9CF2-1442B89CE149/EN-US/GUID-9282196F-D969-404D-B678-F48A13D8D0CB.html" target="_blank" rel="noopener">v&iacute;voactive 6</a>, <a href="https://www8.garmin.com/manuals/webhelp/GUID-9CC4A873-E034-4A06-B2E0-636DCFE760EE/EN-US/GUID-9282196F-D969-404D-B678-F48A13D8D0CB.html" target="_blank" rel="noopener">Venu 3</a>, <a href="https://www8.garmin.com/manuals/webhelp/GUID-2C274FD2-F0C3-445C-B0AC-700FECCE12E9/EN-US/GUID-9282196F-D969-404D-B678-F48A13D8D0CB.html" target="_blank" rel="noopener">Instinct 3 Solar</a>, <a href="https://www8.garmin.com/manuals/webhelp/GUID-2DA54DF8-8084-40ED-954F-EDA09C13B47F/EN-US/GUID-9282196F-D969-404D-B678-F48A13D8D0CB.html" target="_blank" rel="noopener">Instinct 3 AMOLED</a>, <a href="https://www8.garmin.com/manuals/webhelp/GUID-EECCAC99-90D6-4AB1-9A3A-EC433D3365E2/EN-US/GUID-9282196F-D969-404D-B678-F48A13D8D0CB.html" target="_blank" rel="noopener">f&#275;nix 8</a>, <a href="https://www8.garmin.com/manuals/webhelp/GUID-E5C62F3F-DCE3-4197-8CA5-E419B2A55D12/EN-US/GUID-9282196F-D969-404D-B678-F48A13D8D0CB.html" target="_blank" rel="noopener">epix (Gen 2) Standard/Pro</a>; <a href="https://www8.garmin.com/manuals/webhelp/GUID-A298EB1C-21D9-430F-8D06-A2CC74E5D5E9/EN-US/GUID-70D41BFB-2BB2-4933-BF95-47FF63140112.html" target="_blank" rel="noopener">Instinct Solar (first generation)</a>.</li>
     </ol>
   </section>
 
