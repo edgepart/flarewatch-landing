@@ -174,7 +174,7 @@
 
     <div class="page-eyebrow">Legal</div>
     <h1>Privacy Policy</h1>
-    <p class="meta">Last updated: 12 November 2026</p>
+    <p class="meta">Last updated: 13 November 2026</p>
 
     <div class="controller-box">
       <div class="controller-label">Data Controller</div>
@@ -214,7 +214,7 @@
     <p>We do <strong>not</strong> collect continuous heart rate readings, GPS location, audio, or any data not listed above.</p>
 
     <h2>3. How we collect your data</h2>
-    <p>We collect health data through a secure OAuth 2.0 connection to your device manufacturer's API. This means you explicitly authorise FlareWatch to read your data from your device account (Oura, Fitbit, Whoop, Polar, Withings, or Garmin). We never receive your device account password — authentication is handled entirely by the device manufacturer.</p>
+    <p>We collect health data through a secure OAuth 2.0 connection to your device manufacturer's API. This means you explicitly authorise FlareWatch to read your data from your device account (Oura, Fitbit, Whoop, Polar, Withings, or Garmin). For Oura, Fitbit, Whoop, Polar and Withings we never receive your password; you sign in on the manufacturer's own page. For Garmin, you enter your Garmin Connect email and password in FlareWatch once. We use them to sign in to Garmin, keep only the session token Garmin issues, and never store your password.</p>
     <p>You can revoke this access at any time through your device manufacturer's account settings.</p>
 
     <h2>4. Why we process your data and the legal basis</h2>
@@ -256,7 +256,7 @@
       <li><strong>Google</strong> (Google Sheets) — when you sign up, your username, email address and the time you gave consent are added to a private spreadsheet we use to manage sign-ups. No health data is sent to Google.</li>
       <li><strong>Plausible Analytics</strong> — cookieless visitor statistics for flarewat.ch only. It collects no personal data.</li>
     </ul>
-    <p>Within FlareWatch, only our founder can access account and health data, and only to run, support and fix the service.</p>
+    <p>Within FlareWatch, only our founder can access account and health data, and only to run, support and fix the service. Each time the founder opens your data it is recorded, and the record is included when you download your data.</p>
     <p>We may disclose your data if required to do so by law or in response to a valid request from a law enforcement authority.</p>
 
     <h2>6. How long we keep your data</h2>
@@ -285,7 +285,7 @@
     <p>We take reasonable technical and organisational measures to protect your data, including:</p>
     <ul>
       <li>Passwords stored using scrypt hashing — never in plain text</li>
-      <li>Wearable account passwords and access tokens encrypted in our database (AES-128 with tamper protection)</li>
+      <li>We never store your wearable account passwords. Access tokens from wearable services are encrypted in our database (AES-128 with tamper protection), and Garmin session tokens are kept on our hosting provider's encrypted storage</li>
       <li>HTTPS for all data in transit</li>
       <li>Access to production data restricted to authorised personnel only</li>
     </ul>
