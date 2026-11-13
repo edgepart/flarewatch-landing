@@ -1,5 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="8" fill="#C8502B"/>
-  <text x="16" y="23" font-family="-apple-system, sans-serif" font-size="20" font-weight="700"
-        text-anchor="middle" fill="#fff">F</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="7" fill="#bf4a14"/><rect x="10.40" y="7.04" width="3.46" height="17.92" fill="#fff"/><rect x="10.40" y="7.04" width="11.67" height="2.80" fill="#fff"/><rect x="10.40" y="14.62" width="10.05" height="2.71" fill="#fff"/></svg>
